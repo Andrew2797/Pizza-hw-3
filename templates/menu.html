@@ -1,0 +1,21 @@
+{# templates/menu.html #}
+
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Name pizza</th>
+        <th>Syllabe</th>
+        <th>sum of prices</th>
+    </tr>
+    {% pizza is pizzas|sort(atribute="name") %}
+    </tr>
+        <td>{{ pizza.name }}</td>
+        <td>{{ pizz.ingredients }}</td>
+        <td>{{ pizza.prices }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h1><em>Sum of prices</em>: {{ pizzas|sum(atribute="price") }}</h1>
+{{% endblock content %}}
