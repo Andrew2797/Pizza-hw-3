@@ -12,12 +12,12 @@ def index():
 @app.get("/menu-ababagalamaga/")
 def menu():
     pizzas = [
-        {"name": "mozzarella", "price": 200 UAH, "ingredients": "flour, eggs, sugar, salt, water, oil, yeast, Fresh or low-moisture mozzarella, Extra virgin olive oil,Salt & pepper, Fresh basil, garlic, chili flakes"},
-        {"name": "pepperoni", "price": 250 UAH, "ingredients": "flour, eggs, sugar, salt, water, oil, yeast, tomato sauce, pepperoni, cheese mozzarella, chili pepper"},
-        {"name": "four cheese", "price": 300 UAH, "ingredients": "flour, eggs, sugar, salt, water, oil, yeast, cheese mozzarella, cheese parmesan, cheese dor bleu, cheese cheddar"}
+        {"name": "mozzarella", "price": 200 "UAH", "ingredients": "flour, eggs, sugar, salt, water, oil, yeast, Fresh or low-moisture mozzarella, Extra virgin olive oil,Salt & pepper, Fresh basil, garlic, chili flakes"},
+        {"name": "pepperoni", "price": 250 "UAH", "ingredients": "flour, eggs, sugar, salt, water, oil, yeast, tomato sauce, pepperoni, cheese mozzarella, chili pepper"},
+        {"name": "four cheese", "price": 300 "UAH", "ingredients": "flour, eggs, sugar, salt, water, oil, yeast, cheese mozzarella, cheese parmesan, cheese dor bleu, cheese cheddar"}
     ]
     context = {
-        "pizzas": pizzas
+        "pizzas": pizzas,
         "title": "Mega menu"
     }
     return render_template("menu.html", **context)
