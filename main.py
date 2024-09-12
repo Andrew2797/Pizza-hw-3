@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html", title="The Pizza Patch")
 
-@app.get("/menu-ababagalamaga/")
+@app.get("/menu/")
 def menu():
     pizzas = [
         {
