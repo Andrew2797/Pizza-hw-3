@@ -25,9 +25,9 @@
 
 <table>
     <tr>
-        <th>Назва піци</th>
-        <th>Склад</th>
-        <th>Ціна</th>
+        <th>name</th>
+        <th>ingredients</th>
+        <th>price</th>
     </tr>
     {% if request.args.get("sort") %}
     <a href="{{ request.path }}">Вимкнути сортування</a>

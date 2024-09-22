@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 
 
-app = Flask(name)
+app = Flask(__name__)
 
 
 @app.get("/")
@@ -9,7 +9,7 @@ def index():
     return render_template("index.html", title="Моя супер піцерія")
 
 
-@app.get("/menu-ababagalamaga/")
+@app.get("/menu/")
 def menu():
     pizzas = [
         {"name": "pepperoni", "price": "250 UAH", "ingredients": "flour, eggs, sugar, salt, water, oil, yeast, tomato sauce, pepperoni, cheese mozzarella, chili pepper"},
@@ -24,5 +24,5 @@ def menu():
     return render_template("menu.html", **context)
 
 
-if name == "main":
+if __name__ == "__main__":
     app.run(debug=True)
